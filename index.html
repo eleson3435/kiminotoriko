@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>キミのとりこ</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="blackplay" class="blacklayer" onClick="check()">
+            <div class="maintext">
+                <h2 class="glow">キミのとりこ</h2>
+                
+            </div>
+            <audio id="song1"  loop>
+                <source src="music/kimino.mp3" type="audio/mpeg">
+            </audio>
+            <div class="bottomcontrol">
+                <h3 id="currentsong">PLAY</h3>
+                <p>click anywhere to play a song......</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+
+        var count=1;
+
+        function check()
+        {
+            
+            if (count%2!=0)
+            {
+                document.getElementById("currentsong").innerHTML="Kimi No Toiko"   
+                document.getElementById("song1").play();
+            }
+            else
+            {
+                document.getElementById("currentsong").innerHTML="Paused"
+                document.getElementById("song1").pause();
+            } 
+            count++;
+            
+        }
+    </script>
+
+
+</body>
+</html>
